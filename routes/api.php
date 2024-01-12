@@ -25,8 +25,10 @@ route::get('/get_all_invoices',[InvoiceController::class,'get_all_invoices']);
 route::get('/search_invoices',[InvoiceController::class,'search_invoices']);
 route::get('/create_invoices',[InvoiceController::class,'create_invoices']);
 route::post('/add_invoice',[InvoiceController::class,'add_invoice']);
+route::post('/invoice_update/{id?}',[InvoiceController::class,'update_invoice']);
 route::get('/show/invoice/{id?}',[InvoiceController::class,'showInvoice']);
 route::get('/get_invoice_data_for_edit/{id?}',[InvoiceController::class,'editInvoice']);
+route::get('/invoice_item_delete/{id?}',[InvoiceController::class,'deleteInvoiceItem']);
 
 // customers 
 route::get('/customers',[CustomerController::class,'allCustomers']);
